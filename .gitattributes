@@ -1,1 +1,2 @@
-src/libs/zap/** linguist-vendored
+*.c linguist-language=Zig
+*.h linguist-language=Zig
