@@ -176,7 +176,7 @@ Helpers in `response.zig`:
 
 main branch:
 ```
-zig fetch --save https://github.com/<you>/Mesh.zig/archive/refs/heads/main.tar.gz
+zig fetch --save https://github.com/Neon32eeee/mesh/archive/refs/heads/main.tar.gz
 ```
 
 build.zig:
@@ -266,4 +266,4 @@ zig build example
 
 ## More
 
-More details at the [Wiki](https://github.com/<you>/Mesh.zig/wiki).
+More details at the [Wiki](https://github.com/Neon32eeee/mesh/wiki).
