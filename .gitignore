@@ -1,0 +1,8 @@
+.zig-cache/
+zig-out/
+zig-pkg/
+MeshTestdir/
+ExampleDBdir/
+Wiki/
+MeshTest
+ExampleDB
