@@ -29,10 +29,21 @@ pub fn build(b: *std.Build) void {
     const default_step = b.step("default", "Build library");
     default_step.dependOn(&lib.step);
 
-    const zap = b.dependency("zap", .{
+    const zap_dep = b.dependency("zap", .{
         .target = target,
         .optimize = optimize,
     });
+    const zap_mod = zap_dep.module("zap");
+
+    mod.addImport("zap", zap_mod);
+
+    const ddb_dep = b.dependency("ddb", .{
+        .target = target,
+        .optimize = optimize,
+    });
+    const ddb_mod = ddb_dep.module("DDB");
+
+    mod.addImport("ddb", ddb_mod);
 
     const exe = b.addExecutable(.{
         .name = "Mesh",
@@ -42,7 +53,8 @@ pub fn build(b: *std.Build) void {
             .optimize = optimize,
             .imports = &.{
                 .{ .name = "Mesh", .module = mod },
-                .{ .name = "zap", .module = zap.module("zap") },
+                .{ .name = "zap", .module = zap_mod },
+                .{ .name = "ddb", .module = ddb_mod },
             },
         }),
     });
@@ -78,7 +90,8 @@ pub fn build(b: *std.Build) void {
                 .optimize = optimize,
                 .imports = &.{
                     .{ .name = "Mesh", .module = mod },
-                    .{ .name = "zap", .module = zap.module("zap") },
+                    .{ .name = "zap", .module = zap_mod },
+                    .{ .name = "ddb", .module = ddb_mod },
                 },
             }),
         });

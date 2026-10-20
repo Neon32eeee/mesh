@@ -3,8 +3,8 @@ const std = @import("std");
 
 const Allocator = std.mem.Allocator;
 
-pub const zap = @import("libs/zap/src/zap.zig");
-pub const ddb = @import("libs/DDB.zig/src/root.zig");
+pub const zap = @import("zap");
+pub const ddb = @import("ddb");
 
 pub const response = @import("response.zig");
 pub const method = @import("method.zig");
