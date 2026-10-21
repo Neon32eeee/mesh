@@ -32,13 +32,13 @@
     // Once all dependencies are fetched, `zig build` no longer requires
     // internet connectivity.
     .dependencies = .{
+        .zap = .{
+            .url = "git+https://github.com/Neon32eeee/zap-lts?ref=main#6af31dcb3d99553f5ff71f57683cf06ecc33a53a",
+            .hash = "zap-0.10.6-GoeB87aKJABuXjSn_s9Qw99f2TZpc3RDaB_r80x3v9-6",
+        },
         .ddb = .{
             .url = "https://github.com/Neon32eeee/DDB.zig/archive/refs/heads/main.tar.gz",
-            .hash = "ddb-0.1.0-RyCjdXLnAAA4gr6qbOXRQto7zdX_GCM-TyXsu9AyzhZd",
-        },
-        .zap = .{
-            .url = "git+https://github.com/zigzap/zap?ref=master#b12c07dd8cbbbacb2aa52790fb87fb2af185023f",
-            .hash = "zap-0.10.6-GoeB8y-IJAD3m9zkAkeTQalzU1NuvO072u8hA78Irdp8",
+            .hash = "ddb-0.1.0-RyCjdcjnAABjs-LjmxUpyaiXHdJAZhM6CjKeyyFLw-9v",
         },
     },
     // Specifies the set of files and directories that are included in this package.

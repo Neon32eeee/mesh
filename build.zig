@@ -65,9 +65,7 @@ pub fn build(b: *std.Build) void {
     run_step.dependOn(&run_cmd.step);
     run_cmd.step.dependOn(b.getInstallStep());
 
-    if (b.args) |args| {
-        run_cmd.addArgs(args);
-    }
+    run_cmd.addPassthruArgs();
 
     const mod_tests = b.addTest(.{ .root_module = mod });
     const run_mod_tests = b.addRunArtifact(mod_tests);
@@ -98,7 +96,7 @@ pub fn build(b: *std.Build) void {
 
         const run_example = b.addRunArtifact(example_exe);
 
-        if (b.args) |args| run_example.addArgs(args);
+        run_cmd.addPassthruArgs();
 
         examples_step.dependOn(&run_example.step);
 
