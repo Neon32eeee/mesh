@@ -5,7 +5,7 @@
 Mesh is a lightweight HTTP server library for Zig, built on top of [zap](https://github.com/zigzap/zap), with a tree-based router, middleware support, JSON helpers, and optional periodic database saving via [DDB](https://github.com/Neon32eeee/DDB.zig).
 
 Requirements:
-- Zig version: `0.16.0`
+- Zig version: `0.17.0`
 - OS:
   - Linux
   - macOS
