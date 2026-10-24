@@ -38,7 +38,7 @@
         },
         .ddb = .{
             .url = "https://github.com/Neon32eeee/DDB.zig/archive/refs/heads/main.tar.gz",
-            .hash = "ddb-0.1.0-RyCjdcjnAABjs-LjmxUpyaiXHdJAZhM6CjKeyyFLw-9v",
+            .hash = "ddb-0.1.0-RyCjdUTpAAC_zqK_TF99sDLmrx48K4WRfZ4YBheGQv0C",
         },
     },
     // Specifies the set of files and directories that are included in this package.
